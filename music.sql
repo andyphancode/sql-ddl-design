@@ -11,7 +11,7 @@ CREATE DATABASE music;
 CREATE TABLE albums
 (
   id SERIAL PRIMARY KEY,  
-  album_name
+  album_name TEXT NOT NULL
 );
 
 CREATE TABLE songs
@@ -26,7 +26,7 @@ CREATE TABLE songs
 );
 
 INSERT INTO albums (album_name) VALUES ('Middle of Nowhere'), ('A Night at the Opera'), ('Daydream'), ('A Star Is Born'), ('Silver Side Up'), ('The Blueprint 3'),
-('Prism'), ('Hands All Over'), ('Let Go'),  ("The Writing's on the Wall");
+('Prism'), ('Hands All Over'), ('Let Go'), ('The Writing''s on the Wall');
 
 INSERT INTO songs
   (title, duration_in_seconds, release_date, artists, album_id, producers)
