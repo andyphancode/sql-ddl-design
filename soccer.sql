@@ -27,8 +27,9 @@ CREATE TABLE teams
 
 CREATE TABLE rankings
 (
-    ranking_id SERIAL PRIMARY KEY,
-    team_id INTEGER REFERENCES teams
+    id SERIAL PRIMARY KEY,
+    team_id INTEGER REFERENCES teams,
+    ranking INTEGER UNIQUE NOT NULL
 );
 
 CREATE TABLE players
