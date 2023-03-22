@@ -4,7 +4,7 @@ CREATE DATABASE medical_center;
 
 \c medical_center
 
-CREATE TABLE hospitals
+CREATE TABLE medical_centers
 (
     hospital_id SERIAL PRIMARY KEY,
     hospital_name TEXT NOT NULL
@@ -28,7 +28,7 @@ CREATE TABLE doctors
 (
     doctor_id SERIAL PRIMARY KEY,
     doctor_name TEXT NOT NULL,
-    hospital_id INTEGER REFERENCES hospitals ON DELETE SET NULL
+    hospital_id INTEGER REFERENCES medical_centers ON DELETE SET NULL
 );
 
 
